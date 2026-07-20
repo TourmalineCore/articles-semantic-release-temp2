@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.1.0...1.2.0) (2026-07-20)
+
+### Features
+
+* add cookPineappleCake function ([a922154](https://github.com/TourmalineCore/articles-semantic-release-temp2/commit/a9221548e9937592f3e73f9efb972ebd7ab23581))
+
 ## [1.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.0.0...1.1.0-alpha.1) (2026-07-20)
 
 ### Features
