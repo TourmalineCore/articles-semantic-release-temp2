@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.0.0...1.1.0) (2026-07-20)
+
+### Features
+
+* test commit ([dd03fd3](https://github.com/TourmalineCore/articles-semantic-release-temp2/commit/dd03fd33383be1819a7c258daf3c998f14b41590))
+
 ## [1.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.0.0...1.1.0-alpha.1) (2026-07-20)
 
 ### Features
