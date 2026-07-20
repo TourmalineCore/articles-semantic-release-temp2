@@ -1,3 +1,6 @@
+def cookPineappleCake() -> str:
+    return "PineappleCake"
+
 def cookBananaCake() -> str:
     return "BananaCake"
 
