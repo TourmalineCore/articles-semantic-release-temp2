@@ -5,8 +5,7 @@ def cookBananaCake() -> str:
     return "BananaCake"
 
 def cookAppleCake() -> str:
-    # return "AppleCake"
-    return "AppleCake2"
+    return "AppleCake"
     
 def main() -> None:
     return 0
