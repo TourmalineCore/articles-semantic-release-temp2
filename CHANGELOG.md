@@ -1,3 +1,9 @@
+## [1.2.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.2.0-alpha.1...1.2.0-alpha.2) (2026-07-20)
+
+### Bug Fixes
+
+* fix cookAppleCake function ([b48beb6](https://github.com/TourmalineCore/articles-semantic-release-temp2/commit/b48beb66f6b7f95726be458f5600561f35c96046))
+
 ## [1.2.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.1.0...1.2.0-alpha.1) (2026-07-20)
 
 ### Features
