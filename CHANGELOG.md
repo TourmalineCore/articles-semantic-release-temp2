@@ -1,3 +1,4 @@
+## [1.2.0](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.1.0...1.2.0) (2026-07-20)
 ## [1.2.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/1.2.0-alpha.1...1.2.0-alpha.2) (2026-07-20)
 
 ### Bug Fixes
