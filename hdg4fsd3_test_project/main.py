@@ -1,3 +1,6 @@
+def first() -> int:
+    return 1
+
 def main() -> None:
     return 0
 
