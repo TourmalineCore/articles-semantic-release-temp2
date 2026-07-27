@@ -1,3 +1,6 @@
+def second() -> int:
+    return 2
+
 def main() -> None:
     return 0
 
