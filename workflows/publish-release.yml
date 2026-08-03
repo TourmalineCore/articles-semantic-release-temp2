@@ -7,7 +7,7 @@ on:
       - 'master'
       - 'release/*'
       - 'hotfix/*'
-      - develop
+      - 'develop'
       # Maintenace branches group
       - '*/master'
       - '*/release/*'
