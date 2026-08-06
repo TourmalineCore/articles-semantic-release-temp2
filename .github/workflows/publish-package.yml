@@ -25,7 +25,7 @@ jobs:
 
     env:
       IS_DEV_VERSION: >-
-        ${{ github.event_name == 'push2' ||
+        ${{ github.event_name == 'push' ||
             startsWith(github.event.release.target_commitish, 'release/') ||
             contains(github.event.release.target_commitish, '/release/') }}
 
