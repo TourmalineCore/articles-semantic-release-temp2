@@ -1,7 +1,11 @@
 name: Create and publish release 
 
 on:
-  push:
+  workflow_run:
+    workflows:
+      - 'Testing'
+    types:
+      - completed
     branches:
       # Main branches group
       - 'master'
@@ -26,6 +30,7 @@ jobs:
   publish_release:
     name: Create and publish release 
     runs-on: ubuntu-24.04
+    if: github.event.workflow_run.conclusion == 'success'
 
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.ref_name }}

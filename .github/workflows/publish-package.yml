@@ -35,7 +35,7 @@ jobs:
         with:
           # For the `release` event, `github.sha` points at the default
           # branch's HEAD, not at the released commit/tag - checkout by
-          # tag name explicitly so the correct commit gets built.
+          # tag name explicitly so the correct commit gets built
           ref: ${{ github.event_name == 'release' && github.event.release.tag_name || github.ref_name }}
           fetch-depth: 0
           fetch-tags: true
