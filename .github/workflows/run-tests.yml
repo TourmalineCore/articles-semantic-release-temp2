@@ -10,4 +10,4 @@ jobs:
 
     steps:
       - name: Mock steps
-        run: exit 0
+        run: exit 1
