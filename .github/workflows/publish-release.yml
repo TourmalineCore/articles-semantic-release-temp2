@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows:
       - 'Testing'
+      - 'Linting'
     types:
       - completed
     branches:
