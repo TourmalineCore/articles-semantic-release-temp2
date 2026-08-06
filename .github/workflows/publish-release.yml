@@ -1,7 +1,11 @@
 name: Create and publish release 
 
 on:
-  push:
+  workflow_run:
+    workflows:
+      - 'Testing'
+    types:
+      - completed
     branches:
       # Main branches group
       - 'master'
@@ -26,6 +30,7 @@ jobs:
   publish_release:
     name: Create and publish release 
     runs-on: ubuntu-24.04
+    if: github.event.workflow_run.conclusion == 'success'
 
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.ref_name }}
@@ -41,9 +46,6 @@ jobs:
 
       - name: Force release branch to be at workflow sha
         run: |
-          # When a PR is created, GitHub generates a "synthetic" commit 
-          # that simulates a merge, which is why `github.sha` refers to 
-          # it instead of the actual latest commit in the branch.
           git reset --hard ${{ github.sha }}
 
       - name: Verify upstream has NOT changed
