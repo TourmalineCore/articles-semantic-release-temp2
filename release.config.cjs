@@ -9,7 +9,7 @@ module.exports = {
         { "name": 'develop', "prerelease": 'alpha' },
         { "name": '+([0-9]).x/master', "range": '${name.match(/^(\\d+)\\.x/)[1]}.x' },
         { "name": '+([0-9]).x/release/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-rc' },
-        { "name": '+([0-9]).x/hotfix/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-holfix' },
+        { "name": '+([0-9]).x/hotfix/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-hotfix' },
         { "name": '+([0-9]).x/develop', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-alpha' },
     ],
     "tagFormat": '${version}',
@@ -75,6 +75,9 @@ module.exports = {
     ],
 };
 
+// Convert custom version identifiers into a format that complies with semver. 
+// This conversion may be necessary, for example, so that Poetry can correctly 
+// convert the version to PEP 440, the compatible format used by PyPI
 function normalizeToSemver(version) {
     const [base, ...rest] = version.split('-');
 

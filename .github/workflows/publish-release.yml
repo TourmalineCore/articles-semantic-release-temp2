@@ -41,9 +41,6 @@ jobs:
 
       - name: Force release branch to be at workflow sha
         run: |
-          # When a PR is created, GitHub generates a "synthetic" commit 
-          # that simulates a merge, which is why `github.sha` refers to 
-          # it instead of the actual latest commit in the branch.
           git reset --hard ${{ github.sha }}
 
       - name: Verify upstream has NOT changed

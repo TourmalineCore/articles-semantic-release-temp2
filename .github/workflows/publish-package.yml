@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'feature/*'
+      - '*/feature/*'
   release:
     types:
       - published
@@ -21,6 +22,12 @@ jobs:
     defaults:
       run:
         shell: bash
+
+    env:
+      IS_DEV_VERSION: >-
+        ${{ github.event_name == 'push' ||
+            startsWith(github.event.release.target_commitish, 'release/') ||
+            contains(github.event.release.target_commitish, '/release/') }}
 
     steps:
       - name: Checkout repository
@@ -47,10 +54,7 @@ jobs:
 
       - name: Generate and setup version with .dev postfix
         id: compute_dev_version
-        if: >-
-          github.event_name == 'push' ||
-          startsWith(github.event.release.target_commitish, 'release/') ||
-          contains(github.event.release.target_commitish, '/release/')
+        if: env.IS_DEV_VERSION == 'true'
         run: |
           SHORT_SHA=$(git rev-parse --short=8 HEAD)
           DEV_NUM=$((16#$SHORT_SHA))
@@ -60,6 +64,7 @@ jobs:
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
 
       - name: Show released version of the package
+        if: env.IS_DEV_VERSION == 'true'
         run: |
           echo "Released version of the package is ${{ steps.compute_dev_version.outputs.VERSION }}"
 
