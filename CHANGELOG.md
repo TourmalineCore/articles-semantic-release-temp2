@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.0-alpha.5](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/0.3.0-alpha.4...0.3.0-alpha.5) (2026-08-06)
+
+### Features
+
+* [#1](https://github.com/TourmalineCore/articles-semantic-release-temp2/issues/1) ([c451ee3](https://github.com/TourmalineCore/articles-semantic-release-temp2/commit/c451ee3a7a32e62d2c9fcccc033c9040df190eb0))
+
 ## [0.3.0-alpha.4](https://github.com/TourmalineCore/articles-semantic-release-temp2/compare/0.3.0-alpha.3...0.3.0-alpha.4) (2026-08-06)
 
 ### Features
